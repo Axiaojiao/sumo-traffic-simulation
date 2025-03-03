@@ -1,0 +1,14 @@
+<configuration>
+  <input>
+    <net-file value="D:/sumo-traffic-simulation/networks/cross.net.xml"/>
+    <route-files value="D:/sumo-traffic-simulation/routes/krauss.rou.xml"/>
+  </input>
+  <time>
+    <begin value="0"/>
+    <end value="3600"/>
+  </time>
+  <output>
+    <tripinfo-output value="D:/sumo-traffic-simulation/results/tripinfo.xml"/>
+    <queue-output value="D:/sumo-traffic-simulation/results/queues.xml"/>
+  </output>
+</configuration>

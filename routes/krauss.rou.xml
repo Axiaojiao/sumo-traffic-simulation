@@ -1,0 +1,7 @@
+<routes>
+  <vType id="KraussCar" accel="2.6" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="16.67" carFollowModel="Krauss" tau="1.0"/>
+  <vType id="ModifiedKrauss" accel="2.6" decel="4.5" sigma="0.3" length="5" minGap="2.0" maxSpeed="16.67" carFollowModel="Krauss" tau="0.8"/>
+  <flow id="flow_EW" begin="0" end="3600" period="5" type="ModifiedKrauss">
+    <route edges="E_W W_E"/>
+  </flow>
+</routes>

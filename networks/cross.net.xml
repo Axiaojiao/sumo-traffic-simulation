@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-03-03 15:34:52 by Eclipse SUMO netconvert Version 1.22.0
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <node-files value="networks/cross.nod.xml"/>
+        <edge-files value="networks/cross.edg.xml"/>
+    </input>
+
+    <output>
+        <output-file value="networks/cross.net.xml"/>
+    </output>
+
+</netconvertConfiguration>
+-->
+
+<net version="1.20" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="100.00,100.00" convBoundary="0.00,0.00,200.00,200.00" origBoundary="-100.00,-100.00,100.00,100.00" projParameter="!"/>
+
+    <edge id=":east_0" function="internal">
+        <lane id=":east_0_0" index="0" speed="3.65" length="4.67" shape="200.00,98.40 201.20,99.20 201.60,100.00 201.20,100.80 200.00,101.60"/>
+    </edge>
+    <edge id=":north_0" function="internal">
+        <lane id=":north_0_0" index="0" speed="3.65" length="4.67" shape="101.60,200.00 100.80,201.20 100.00,201.60 99.20,201.20 98.40,200.00"/>
+    </edge>
+    <edge id=":south_0" function="internal">
+        <lane id=":south_0_0" index="0" speed="3.65" length="4.67" shape="98.40,0.00 99.20,-1.20 100.00,-1.60 100.80,-1.20 101.60,0.00"/>
+    </edge>
+    <edge id=":west_0" function="internal">
+        <lane id=":west_0_0" index="0" speed="3.65" length="4.67" shape="0.00,101.60 -1.20,100.80 -1.60,100.00 -1.20,99.20 0.00,98.40"/>
+    </edge>
+
+    <edge id="E_W" from="west" to="east" priority="-1">
+        <lane id="E_W_0" index="0" speed="13.89" length="200.00" shape="0.00,92.00 200.00,92.00"/>
+        <lane id="E_W_1" index="1" speed="13.89" length="200.00" shape="0.00,95.20 200.00,95.20"/>
+        <lane id="E_W_2" index="2" speed="13.89" length="200.00" shape="0.00,98.40 200.00,98.40"/>
+    </edge>
+    <edge id="N_S" from="north" to="south" priority="-1">
+        <lane id="N_S_0" index="0" speed="11.11" length="200.00" shape="95.20,200.00 95.20,0.00"/>
+        <lane id="N_S_1" index="1" speed="11.11" length="200.00" shape="98.40,200.00 98.40,0.00"/>
+    </edge>
+    <edge id="S_N" from="south" to="north" priority="-1">
+        <lane id="S_N_0" index="0" speed="11.11" length="200.00" shape="104.80,0.00 104.80,200.00"/>
+        <lane id="S_N_1" index="1" speed="11.11" length="200.00" shape="101.60,0.00 101.60,200.00"/>
+    </edge>
+    <edge id="W_E" from="east" to="west" priority="-1">
+        <lane id="W_E_0" index="0" speed="13.89" length="200.00" shape="200.00,108.00 0.00,108.00"/>
+        <lane id="W_E_1" index="1" speed="13.89" length="200.00" shape="200.00,104.80 0.00,104.80"/>
+        <lane id="W_E_2" index="2" speed="13.89" length="200.00" shape="200.00,101.60 0.00,101.60"/>
+    </edge>
+
+    <junction id="east" type="priority" x="200.00" y="100.00" incLanes="E_W_0 E_W_1 E_W_2" intLanes=":east_0_0" shape="200.00,100.00 200.00,90.40 200.00,100.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="north" type="priority" x="100.00" y="200.00" incLanes="S_N_0 S_N_1" intLanes=":north_0_0" shape="100.00,200.00 106.40,200.00 100.00,200.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="south" type="priority" x="100.00" y="0.00" incLanes="N_S_0 N_S_1" intLanes=":south_0_0" shape="100.00,0.00 93.60,0.00 100.00,0.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="west" type="priority" x="0.00" y="100.00" incLanes="W_E_0 W_E_1 W_E_2" intLanes=":west_0_0" shape="0.00,100.00 0.00,109.60 0.00,100.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+
+    <connection from="E_W" to="W_E" fromLane="2" toLane="2" via=":east_0_0" dir="t" state="M"/>
+    <connection from="N_S" to="S_N" fromLane="1" toLane="1" via=":south_0_0" dir="t" state="M"/>
+    <connection from="S_N" to="N_S" fromLane="1" toLane="1" via=":north_0_0" dir="t" state="M"/>
+    <connection from="W_E" to="E_W" fromLane="2" toLane="2" via=":west_0_0" dir="t" state="M"/>
+
+    <connection from=":east_0" to="W_E" fromLane="0" toLane="2" dir="t" state="M"/>
+    <connection from=":north_0" to="N_S" fromLane="0" toLane="1" dir="t" state="M"/>
+    <connection from=":south_0" to="S_N" fromLane="0" toLane="1" dir="t" state="M"/>
+    <connection from=":west_0" to="E_W" fromLane="0" toLane="2" dir="t" state="M"/>
+
+</net>
