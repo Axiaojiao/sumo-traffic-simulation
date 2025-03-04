@@ -18,7 +18,7 @@ DOI：10.3969/j.issn.1007-130X.2012.07.036
 sumo安装：
          方式一https://sumo.dlr.de/docs/index.html，点击该链接官网进行下载，但下载速度较慢
 
-         方式二直接下载我上传的sumo文件 ，版本信息：64 位安装程序sumo-win64-1.22.0
+         方式二直接下载我上传的sumo文件 ，版本信息：64 位安装程序sumo-win64-1.22.0（上传大文件有点麻烦，目前正在寻找改进方法）
          
 sumo使用：零基础入门可看【SUMO软件基本教学】https://www.bilibili.com/video/BV1H7411F76B?vd_source=4f923dbff17d7c5018642c7afddf8cab
 会基本使用后可试着进行仿真，可先搭建简单十字路口进行仿真训练
